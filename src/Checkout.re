@@ -13,9 +13,9 @@ type token = {
 
 type params = {
   .
-  "key": string,
-  "token": (token, checkoutArgs) => unit,
-  "name": Js.Nullable.t(string),
+  "key": Js.nullable(string),
+  "token": Js.nullable((token, checkoutArgs) => unit),
+  "name": Js.nullable(string),
   "image": Js.nullable(string),
   "locale": Js.nullable(string),
   "description": Js.nullable(string),
@@ -35,8 +35,8 @@ type params = {
 [@bs.obj]
 external makeParams :
   (
-    ~key: string,
-    ~token: (token, checkoutArgs) => unit,
+    ~key: string=?,
+    ~token: (token, checkoutArgs) => unit=?,
     ~name: string=?,
     ~image: string=?,
     ~locale: string=?,
@@ -49,7 +49,7 @@ external makeParams :
     ~shippingAddress: string=?,
     ~email: string=?,
     ~label: string=?,
-    ~allowRememberMe: string=?,
+    ~allowRememberMe: bool=?,
     ~opened: unit => unit=?,
     ~closed: unit => unit=?,
     unit
