@@ -57,6 +57,6 @@ external makeParams :
   params =
   "";
 
-[@bs.send.pipe : t] external configure : params => unit = "";
+[@bs.send.pipe : t] external configure : params => t = "";
 
 [@bs.send.pipe : t] external open_ : params => unit = "open";
