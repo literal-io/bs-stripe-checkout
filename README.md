@@ -1,6 +1,8 @@
 # Basic Reason Template
 
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+BuckleScript bindings to [Stripe Checkout](https://stripe.com/docs/checkout#integration-custom).
+
+Status: Mostly complete, could use some type refinement.
 
 # Build
 ```
